@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Ubuntu;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo {
+  width: 7%;
+}
+
+.navbar {
+  width: 92%;
+  height: 15%;
+  margin: auto;
+}
+
+button {
+  color: #fbfcfd;
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: lightseagreen;
+  cursor: pointer;
+}
+
+button:active {
+  transition: all 0.3s ease-in-out;
+  background-color: #11dbd1;
+}
+
+.main {
+  color: #fbfcfd;
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin: 5px 0 20px;
+  line-height: 80px;
+  opacity: 0;
+  animation: h3 1s linear forwards;
+  animation-delay: 3s;
+}
+
+h3 {
+  opacity: 0;
+  animation: h3 1s linear forwards;
+  animation-delay: 2s;
+}
+
+span {
+  font-style: italic;
+  color: orangered;
+}
+
+.navbar {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(170, 2, 2, 0.356);
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.social-links img {
+  width: 24px;
+  margin: 12px;
+}
+
+.social-links img:hover {
+  transition: all 0.3s ease-out;
+  transform: scale(1.4) translateY(-8px);
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  width: 40px;
+  text-align: center;
+  position: fixed;
+  left: 50%;
+  opacity: 0;
+  animation: socialicons 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.bubbles img {
+  width: 50px;
+  animation: bubble 7s linear infinite;
+}
+
+.bubbles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: -40px;
+}
+
+/*animation 101 */
+
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(80vh);
+    opacity: 0;
+  }
+}
+
+.bubbles img:nth-child(1) {
+  animation-delay: 2s;
+  width: 15px;
+}
+
+.bubbles img:nth-child(2) {
+  animation-delay: 4s;
+  width: 25px;
+}
+
+.bubbles img:nth-child(3) {
+  animation-delay: 1s;
+  width: 12px;
+}
+
+.bubbles img:nth-child(4) {
+  animation-delay: 3s;
+  width: 20px;
+}
+
+.bubbles img:nth-child(5) {
+  animation-delay: 2s;
+  width: 30px;
+}
+
+.bubbles img:nth-child(6) {
+  animation-delay: 5s;
+  width: 10px;
+}
+
+.bubbles img:nth-child(7) {
+  animation-delay: 7s;
+  width: 15px;
+}
+
+@keyframes h3 {
+  0% {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes socialicons {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+/*
+.news {
+  background-color: rgba(0, 0, 0, 0.507);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.contact {
+  position: relative;
+  bottom: 100px;
+  right: 100px;
+}
